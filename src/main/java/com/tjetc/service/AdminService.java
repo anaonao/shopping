@@ -10,7 +10,7 @@ public interface AdminService {
      * @param Pwd
      * @return
      */
-    Admin adminLogin(String name, String Pwd);
+    Admin findNameAndPwd(String name,String Pwd);
 
     /**
      * 添加管理员
@@ -24,58 +24,58 @@ public interface AdminService {
      * @param id
      * @return
      */
-    int deleteAdminById(int id);
+    int deleteById(Integer id);
 
     /**
      * 修改管理员
      * @param admin
      * @return
      */
-    int updateAdmin(Admin admin);
+    int update(Admin admin);
     //查询都是分页
 
     /**
      * 查询所有管理员
      * @return
      */
-    Page<Admin> findAdminAll();
-    int adminAllCount();
+    Page<Admin> findAll();
+    int countAll();
 
     /**
      * 根据名称查询
      * @param name
      * @return
      */
-    Admin findAdminByName(String name);
+    Admin findByName(String name);
 
     /**
      * 根据编号查询
      * @param id
      * @return
      */
-    Admin findAdminById(int id);
+    Admin findById(Integer id);
 
     /**
      * 根据名称模糊查询
      * @param name
      * @return
      */
-    Page<Admin> findAdminByLikeName(String name);
-    int adminByLikeNameCount(String name);
+    Page<Admin> findByLikeName(String name);
+    int countByLikeName(String name);
 
     /**
      * 根据状态查询
      * @param state
      * @return
      */
-    Page<Admin> findAdminByState(int state);
-    int adminByStateCount(int state);
+    Page<Admin> findByState(Integer state);
+    int countadminByState(Integer state);
 
     /**
      * 根据手机号模糊查询
      * @param phone
      * @return
      */
-    Page<Admin> findAdminByLikePhone(String phone);
-    int adminByLikePhoneCount(String phone);
+    Page<Admin> findByLikePhone(String phone);
+    int countByLikePhone(String phone);
 }

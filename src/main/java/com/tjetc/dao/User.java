@@ -24,57 +24,57 @@ public interface User {
      * @param id
      * @return
      */
-    int deleteUserById(int id);
+    int deleteById(Integer id);
 
     /**
      * 修改用户信息
      * @param user
      * @return
      */
-    int updateUser(User user);
+    int update(User user);
 
     /**
      * 查询所有用户信息
      * @return
      */
-    Page<User> selectUserPageAll();
-    int userCountAll();
+    Page<User> selectPageAll();
+    int countAll();
 
     /**
      * 根据编号查询用户信息
      * @param id
      * @return
      */
-    User selectUserById(int id);
+    User selectById(Integer id);
 
     /**
      * 根据姓名查询用户
      * @param name
      * @return
      */
-    User selectUserByName(String name);
+    User selectByName(String name);
 
     /**
      * 根据姓名模糊查询
      * @param name
      * @return
      */
-    Page<User> selectUserPageLikeName(String name);
-    int userCountLikeName(String name);
+    Page<User> selectPageLikeName(String name);
+    int countLikeName(String name);
 
     /**
      * 根据手机号模糊查询
      * @param phone
      * @return
      */
-    Page<User> selectUserPageLikePhone(String phone);
-    int userCountLikePhone(String phone);
+    Page<User> selectPageLikePhone(String phone);
+    int countLikePhone(String phone);
 
     /**
      * 根据状态查询
      * @param state
      * @return
      */
-    Page<User> selectUserPageByState(int state);
-    int userCountByState(int state);
+    Page<User> selectPageByState(Integer state);
+    int countByState(Integer state);
 }

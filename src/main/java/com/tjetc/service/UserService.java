@@ -10,71 +10,71 @@ public interface UserService {
      * @param pwd
      * @return
      */
-    User findNameAndPwd(String name, String pwd);
+    User findNameAndPwd(String name,String pwd);
 
     /**
      * 用户注册
      * @param user
      * @return
      */
-    User userRegister(User user);
+    User addUser(User user);
 
     /**
      * 删除用户
      * @param id
      * @return
      */
-    int deleteUserById(int id);
+    int deleteById(Integer id);
 
     /**
      * 修改用户信息
      * @param user
      * @return
      */
-    int updateUser(User user);
+    int update(User user);
 
     /**
      * 查询所有用户信息
      * @return
      */
-    Page<User> findUserPageAll();
-    int userCountAll();
+    Page<User> findPageAll();
+    int countAll();
 
     /**
      * 根据编号查询用户信息
      * @param id
      * @return
      */
-    User findUserById(int id);
+    User findById(Integer id);
 
     /**
      * 根据姓名查询用户
      * @param name
      * @return
      */
-    User findUserByName(String name);
+    User findByName(String name);
 
     /**
      * 根据姓名模糊查询
      * @param name
      * @return
      */
-    Page<User> findUserPageLikeName(String name);
-    int userCountLikeName(String name);
+    Page<User> findPageLikeName(String name);
+    int countLikeName(String name);
 
     /**
      * 根据手机号模糊查询
      * @param phone
      * @return
      */
-    Page<User> findUserPageLikePhone(String phone);
-    int userCountLikePhone(String phone);
+    Page<User> findPageLikePhone(String phone);
+    int countLikePhone(String phone);
 
     /**
      * 根据状态查询
      * @param state
      * @return
      */
-    Page<User> findUserPageByState(int state);
-    int userCountByState(int state);
+    Page<User> findPageByState(Integer state);
+    int countByState(Integer state);
 }
