@@ -9,14 +9,14 @@ public class Product {
     private String productPrice;//商品价格
     private List<ProductImg> list;//商品图片路径
     private String productDiscraction;//商品描述
-    private String productSales;//商品销量
-    private int productDiscount;
+    private int productSales;//商品销量
+    private int productDiscount;//折扣
     private Product product;//商品类型信息
 
     public Product() {
     }
 
-    public Product(int productId, String productName, String productCount, String productPrice, List<ProductImg> list, String productDiscraction, String productSales, int productDiscount, Product product) {
+    public Product(int productId, String productName, String productCount, String productPrice, List<ProductImg> list, String productDiscraction, int productSales, int productDiscount, Product product) {
         this.productId = productId;
         this.productName = productName;
         this.productCount = productCount;
@@ -76,11 +76,11 @@ public class Product {
         this.productDiscraction = productDiscraction;
     }
 
-    public String getProductSales() {
+    public int getProductSales() {
         return productSales;
     }
 
-    public void setProductSales(String productSales) {
+    public void setProductSales(int productSales) {
         this.productSales = productSales;
     }
 
@@ -109,7 +109,7 @@ public class Product {
                 ", productPrice='" + productPrice + '\'' +
                 ", list=" + list +
                 ", productDiscraction='" + productDiscraction + '\'' +
-                ", productSales='" + productSales + '\'' +
+                ", productSales=" + productSales +
                 ", productDiscount=" + productDiscount +
                 ", product=" + product +
                 '}';

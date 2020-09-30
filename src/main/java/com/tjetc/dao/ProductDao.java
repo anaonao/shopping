@@ -17,7 +17,7 @@ public interface ProductDao {
      * @param id
      * @return
      */
-    int delete(int id);
+    int delete(Integer id);
 
     /**
      * 修改商品
@@ -38,7 +38,7 @@ public interface ProductDao {
      * @param id
      * @return
      */
-    Product selectById(int id);
+    Product selectById(Integer id);
 
     /**
      * 根据名称模糊查询商品
@@ -58,11 +58,11 @@ public interface ProductDao {
     int countLikePrice(Double startPrice,Double endPrice);
 
     /**
-     * 根据商品热范围查询商品
-     * @param startHot
-     * @param endHot
+     * 根据商品销量降序查询
+     * @param Sales
      * @return
      */
-    Page<Product> selectLikeHot(int startHot,int endHot);
-    int countLikeHot(int startHot,int endHot);
+    Page<Product> selectLikeSales(Integer Sales);
+    int countLikeSales(Integer Sales);
+    //根据商品
 }

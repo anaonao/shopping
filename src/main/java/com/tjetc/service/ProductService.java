@@ -57,11 +57,11 @@ public interface ProductService {
     int countLikePrice(Double startPrice,Double endPrice);
 
     /**
-     * 根据商品热范围查询商品
-     * @param startHot
-     * @param endHot
+     * 根据商品销量降序查询
+     * @param Sales
      * @return
      */
-    Page<Product> findLikeHot(int startHot,int endHot);
-    int countLikeHot(int startHot,int endHot);
+    Page<Product> findLikeSales(Integer Sales);
+    int countLikeSales(Integer Sales);
+    //根据商品
 }

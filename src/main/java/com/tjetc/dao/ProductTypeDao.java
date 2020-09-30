@@ -16,7 +16,7 @@ public interface ProductTypeDao {
      * @param id
      * @return
      */
-    int delete(int id);
+    int delete(Integer id);
 
     /**
      * 修改商品类型

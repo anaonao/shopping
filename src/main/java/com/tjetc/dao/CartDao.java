@@ -17,7 +17,7 @@ public interface CartDao {
      * @param id
      * @return
      */
-    int delete(int id);
+    int delete(Integer id);
 
     /**
      * 修改
