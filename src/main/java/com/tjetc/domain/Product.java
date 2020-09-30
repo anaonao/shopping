@@ -1,26 +1,30 @@
 package com.tjetc.domain;
 
+import java.util.List;
+
 public class Product {
     private int productId;//商品编号
     private String productName;//商品名称
     private String productCount;//商品库存
     private String productPrice;//商品价格
-    private String productImage;//商品图片路径
-    private String productMsg;//商品描述
-    private String productHot;//商品热度
+    private List<ProductImg> list;//商品图片路径
+    private String productDiscraction;//商品描述
+    private String productSales;//商品销量
+    private int productDiscount;
     private Product product;//商品类型信息
 
     public Product() {
     }
 
-    public Product(int productId, String productName, String productCount, String productPrice, String productImage, String productMsg, String productHot, Product product) {
+    public Product(int productId, String productName, String productCount, String productPrice, List<ProductImg> list, String productDiscraction, String productSales, int productDiscount, Product product) {
         this.productId = productId;
         this.productName = productName;
         this.productCount = productCount;
         this.productPrice = productPrice;
-        this.productImage = productImage;
-        this.productMsg = productMsg;
-        this.productHot = productHot;
+        this.list = list;
+        this.productDiscraction = productDiscraction;
+        this.productSales = productSales;
+        this.productDiscount = productDiscount;
         this.product = product;
     }
 
@@ -56,28 +60,36 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public String getProductImage() {
-        return productImage;
+    public List<ProductImg> getList() {
+        return list;
     }
 
-    public void setProductImage(String productImage) {
-        this.productImage = productImage;
+    public void setList(List<ProductImg> list) {
+        this.list = list;
     }
 
-    public String getProductMsg() {
-        return productMsg;
+    public String getProductDiscraction() {
+        return productDiscraction;
     }
 
-    public void setProductMsg(String productMsg) {
-        this.productMsg = productMsg;
+    public void setProductDiscraction(String productDiscraction) {
+        this.productDiscraction = productDiscraction;
     }
 
-    public String getProductHot() {
-        return productHot;
+    public String getProductSales() {
+        return productSales;
     }
 
-    public void setProductHot(String productHot) {
-        this.productHot = productHot;
+    public void setProductSales(String productSales) {
+        this.productSales = productSales;
+    }
+
+    public int getProductDiscount() {
+        return productDiscount;
+    }
+
+    public void setProductDiscount(int productDiscount) {
+        this.productDiscount = productDiscount;
     }
 
     public Product getProduct() {
@@ -95,9 +107,10 @@ public class Product {
                 ", productName='" + productName + '\'' +
                 ", productCount='" + productCount + '\'' +
                 ", productPrice='" + productPrice + '\'' +
-                ", productImage='" + productImage + '\'' +
-                ", productMsg='" + productMsg + '\'' +
-                ", productHot='" + productHot + '\'' +
+                ", list=" + list +
+                ", productDiscraction='" + productDiscraction + '\'' +
+                ", productSales='" + productSales + '\'' +
+                ", productDiscount=" + productDiscount +
                 ", product=" + product +
                 '}';
     }
