@@ -30,7 +30,7 @@ public interface ProductDao {
      * 查询所有商品
      * @return
      */
-    Page<Product> selectAll();
+    Page<Product> selectAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -45,7 +45,7 @@ public interface ProductDao {
      * @param name
      * @return
      */
-    Page<Product> selectLikeName(String name);
+    Page<Product> selectLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 
     /**
@@ -54,7 +54,7 @@ public interface ProductDao {
      * @param endPrice
      * @return
      */
-    Page<Product> selectLikePrice(Double startPrice,Double endPrice);
+    Page<Product> selectLikePrice(int pageNum, int pageSize,Double startPrice,Double endPrice);
     int countLikePrice(Double startPrice,Double endPrice);
 
     /**
@@ -62,7 +62,7 @@ public interface ProductDao {
      * @param Sales
      * @return
      */
-    Page<Product> selectLikeSales(Integer Sales);
+    Page<Product> selectLikeSales(int pageNum,int pageSize,Integer Sales);
     int countLikeSales(Integer Sales);
     //根据商品
 }

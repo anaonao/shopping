@@ -29,7 +29,7 @@ public interface ProductTypeDao {
      * 查询所有商品类型
      * @return
      */
-    Page<ProductType> selectAll();
+    Page<ProductType> selectAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -37,7 +37,7 @@ public interface ProductTypeDao {
      * @param name
      * @return
      */
-    ProductType selectByName(String name);
+    ProductType selectByName(int pageNum, int pageSize,String name);
 
     /**
      * 根据编号查询
@@ -51,6 +51,6 @@ public interface ProductTypeDao {
      * @param name
      * @return
      */
-    Page<ProductType> selectPageLikeName(String name);
+    Page<ProductType> selectPageLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 }

@@ -30,7 +30,7 @@ public interface CartDao {
      * 查询所有
      * @return
      */
-    Page<Cart> selectAll();
+    Page<Cart> selectAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -45,7 +45,7 @@ public interface CartDao {
      * @param name
      * @return
      */
-    Page<Cart> selectByName(String name);
+    Page<Cart> selectByName(int pageNum, int pageSize,String name);
     int countByName(String name);
 
     /**
@@ -53,7 +53,7 @@ public interface CartDao {
      * @param name
      * @return
      */
-    Page<Cart> selectLikeName(String name);
+    Page<Cart> selectLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 
 }

@@ -37,7 +37,7 @@ public interface UserService {
      * 查询所有用户信息
      * @return
      */
-    Page<User> findPageAll();
+    Page<User> findPageAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -59,7 +59,7 @@ public interface UserService {
      * @param name
      * @return
      */
-    Page<User> findPageLikeName(String name);
+    Page<User> findPageLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 
     /**
@@ -67,7 +67,7 @@ public interface UserService {
      * @param phone
      * @return
      */
-    Page<User> findPageLikePhone(String phone);
+    Page<User> findPageLikePhone(int pageNum, int pageSize,String phone);
     int countLikePhone(String phone);
 
     /**
@@ -75,6 +75,6 @@ public interface UserService {
      * @param state
      * @return
      */
-    Page<User> findPageByState(Integer state);
+    Page<User> findPageByState(int pageNum, int pageSize,Integer state);
     int countByState(Integer state);
 }

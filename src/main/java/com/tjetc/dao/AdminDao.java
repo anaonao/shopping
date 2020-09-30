@@ -38,7 +38,7 @@ public interface AdminDao {
      * 查询所有管理员
      * @return
      */
-    Page<Admin> selectAll();
+    Page<Admin> selectAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -60,7 +60,7 @@ public interface AdminDao {
      * @param name
      * @return
      */
-    Page<Admin> selectByLikeName(String name);
+    Page<Admin> selectByLikeName(int pageNum, int pageSize,String name);
     int countByLikeName(String name);
 
     /**
@@ -68,7 +68,7 @@ public interface AdminDao {
      * @param state
      * @return
      */
-    Page<Admin> selectByState(Integer state);
+    Page<Admin> selectByState(int pageNum, int pageSize,Integer state);
     int countadminByState(Integer state);
 
     /**
@@ -76,6 +76,6 @@ public interface AdminDao {
      * @param phone
      * @return
      */
-    Page<Admin> selectByLikePhone(String phone);
+    Page<Admin> selectByLikePhone(int pageNum, int pageSize,String phone);
     int countByLikePhone(String phone);
 }

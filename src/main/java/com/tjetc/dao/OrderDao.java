@@ -18,7 +18,7 @@ public interface OrderDao {
      * 查询订单信息
      * @return
      */
-    Page<Order> selectAll();
+    Page<Order> selectAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -34,7 +34,7 @@ public interface OrderDao {
      * @param endStart
      * @return
      */
-    Page<Order> selectLikeDate(Date startDate,Date endStart);
+    Page<Order> selectLikeDate(int pageNum, int pageSize,Date startDate,Date endStart);
     int countLikeDate(Date startDate,Date endStart);
 
     /**
@@ -42,6 +42,6 @@ public interface OrderDao {
      * @param userName
      * @return
      */
-    Page<Order> selectByUserName(String userName);
+    Page<Order> selectByUserName(int pageNum, int pageSize,String userName);
     int countByUserName(String userName);
 }

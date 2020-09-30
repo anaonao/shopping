@@ -17,7 +17,7 @@ public interface OrderService {
      * 查询订单信息
      * @return
      */
-    Page<Order> findAll();
+    Page<Order> findAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -33,7 +33,7 @@ public interface OrderService {
      * @param endStart
      * @return
      */
-    Page<Order> findLikeDate(Date startDate, Date endStart);
+    Page<Order> findLikeDate(int pageNum, int pageSize,Date startDate, Date endStart);
     int countLikeDate(Date startDate,Date endStart);
 
     /**
@@ -41,6 +41,6 @@ public interface OrderService {
      * @param userName
      * @return
      */
-    Page<Order> findByUserName(String userName);
+    Page<Order> findByUserName(int pageNum, int pageSize,String userName);
     int countByUserName(String userName);
 }

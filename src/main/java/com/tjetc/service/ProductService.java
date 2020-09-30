@@ -29,7 +29,7 @@ public interface ProductService {
      * 查询所有商品
      * @return
      */
-    Page<Product> findAll();
+    Page<Product> findAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -44,7 +44,7 @@ public interface ProductService {
      * @param name
      * @return
      */
-    Page<Product> findLikeName(String name);
+    Page<Product> findLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 
     /**
@@ -53,7 +53,7 @@ public interface ProductService {
      * @param endPrice
      * @return
      */
-    Page<Product> findLikePrice(Double startPrice,Double endPrice);
+    Page<Product> findLikePrice(int pageNum, int pageSize,Double startPrice,Double endPrice);
     int countLikePrice(Double startPrice,Double endPrice);
 
     /**
@@ -61,7 +61,7 @@ public interface ProductService {
      * @param Sales
      * @return
      */
-    Page<Product> findLikeSales(Integer Sales);
+    Page<Product> findLikeSales(int pageNum, int pageSize,Integer Sales);
     int countLikeSales(Integer Sales);
     //根据商品
 }

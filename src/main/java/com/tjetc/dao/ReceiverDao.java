@@ -30,6 +30,6 @@ public interface ReceiverDao {
      * 查询所有地址
      * @return
      */
-    Page<Receiver> selectAll();
+    Page<Receiver> selectAll(int pageNum, int pageSize);
     int countAll();
 }

@@ -29,7 +29,7 @@ public interface CartService {
      * 查询所有
      * @return
      */
-    Page<Cart> findAll();
+    Page<Cart> findAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -44,7 +44,7 @@ public interface CartService {
      * @param name
      * @return
      */
-    Page<Cart> findByName(String name);
+    Page<Cart> findByName(int pageNum, int pageSize,String name);
     int countByName(String name);
 
     /**
@@ -52,6 +52,6 @@ public interface CartService {
      * @param name
      * @return
      */
-    Page<Cart> findLikeName(String name);
+    Page<Cart> findLikeName(int pageNum, int pageSize,String name);
     int countLikeName(String name);
 }

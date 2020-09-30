@@ -30,6 +30,6 @@ public interface OrderItemService {
      * 查询所有订单商品信息
      * @return
      */
-    Page<OrderItemDao> findAll();
+    Page<OrderItemDao> findAll(int pageNum, int pageSize);
     int countAll();
 }

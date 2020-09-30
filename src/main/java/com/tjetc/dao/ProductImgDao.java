@@ -30,6 +30,6 @@ public interface ProductImgDao {
      * 查询
      * @return
      */
-    Page<ProductImg> selectAll();
+    Page<ProductImg> selectAll(int pageNum, int pageSize);
     int countAll();
 }

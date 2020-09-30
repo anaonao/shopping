@@ -29,6 +29,6 @@ public interface ProductImgService {
      * 查询
      * @return
      */
-    Page<ProductImg> findAll();
+    Page<ProductImg> findAll(int pageNum, int pageSize);
     int countAll();
 }

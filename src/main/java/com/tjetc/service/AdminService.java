@@ -38,7 +38,7 @@ public interface AdminService {
      * 查询所有管理员
      * @return
      */
-    Page<Admin> findAll();
+    Page<Admin> findAll(int pageNum, int pageSize);
     int countAll();
 
     /**
@@ -60,7 +60,7 @@ public interface AdminService {
      * @param name
      * @return
      */
-    Page<Admin> findByLikeName(String name);
+    Page<Admin> findByLikeName(int pageNum, int pageSize,String name);
     int countByLikeName(String name);
 
     /**
@@ -68,7 +68,7 @@ public interface AdminService {
      * @param state
      * @return
      */
-    Page<Admin> findByState(Integer state);
+    Page<Admin> findByState(int pageNum, int pageSize,Integer state);
     int countadminByState(Integer state);
 
     /**
@@ -76,6 +76,6 @@ public interface AdminService {
      * @param phone
      * @return
      */
-    Page<Admin> findByLikePhone(String phone);
+    Page<Admin> findByLikePhone(int pageNum, int pageSize,String phone);
     int countByLikePhone(String phone);
 }
