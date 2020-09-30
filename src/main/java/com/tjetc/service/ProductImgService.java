@@ -30,5 +30,4 @@ public interface ProductImgService {
      * @return
      */
     Page<ProductImg> findAll(int pageNum, int pageSize);
-    int countAll();
 }

@@ -31,5 +31,4 @@ public interface OrderItemService {
      * @return
      */
     Page<OrderItemDao> findAll(int pageNum, int pageSize);
-    int countAll();
 }

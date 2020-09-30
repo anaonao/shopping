@@ -29,7 +29,6 @@ public interface ProductTypeService {
      * @return
      */
     Page<ProductType> findAll(int pageNum, int pageSize);
-    int countAll();
 
     /**
      * 根据名字查询
@@ -51,5 +50,4 @@ public interface ProductTypeService {
      * @return
      */
     Page<ProductType> findPageLikeName(int pageNum, int pageSize,String name);
-    int countLikeName(String name);
 }

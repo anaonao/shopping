@@ -39,7 +39,6 @@ public interface AdminService {
      * @return
      */
     Page<Admin> findAll(int pageNum, int pageSize);
-    int countAll();
 
     /**
      * 根据名称查询
@@ -61,7 +60,6 @@ public interface AdminService {
      * @return
      */
     Page<Admin> findByLikeName(int pageNum, int pageSize,String name);
-    int countByLikeName(String name);
 
     /**
      * 根据状态查询
@@ -69,7 +67,6 @@ public interface AdminService {
      * @return
      */
     Page<Admin> findByState(int pageNum, int pageSize,Integer state);
-    int countadminByState(Integer state);
 
     /**
      * 根据手机号模糊查询
@@ -77,5 +74,4 @@ public interface AdminService {
      * @return
      */
     Page<Admin> findByLikePhone(int pageNum, int pageSize,String phone);
-    int countByLikePhone(String phone);
 }

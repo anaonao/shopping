@@ -30,7 +30,6 @@ public interface ProductService {
      * @return
      */
     Page<Product> findAll(int pageNum, int pageSize);
-    int countAll();
 
     /**
      * 根据编号查询商品
@@ -45,7 +44,6 @@ public interface ProductService {
      * @return
      */
     Page<Product> findLikeName(int pageNum, int pageSize,String name);
-    int countLikeName(String name);
 
     /**
      * 根据价格范围查询商品
@@ -54,7 +52,6 @@ public interface ProductService {
      * @return
      */
     Page<Product> findLikePrice(int pageNum, int pageSize,Double startPrice,Double endPrice);
-    int countLikePrice(Double startPrice,Double endPrice);
 
     /**
      * 根据商品销量降序查询
@@ -62,6 +59,5 @@ public interface ProductService {
      * @return
      */
     Page<Product> findLikeSales(int pageNum, int pageSize,Integer Sales);
-    int countLikeSales(Integer Sales);
     //根据商品
 }

@@ -30,7 +30,6 @@ public interface CartService {
      * @return
      */
     Page<Cart> findAll(int pageNum, int pageSize);
-    int countAll();
 
     /**
      * 根据订单编号查询
@@ -45,7 +44,6 @@ public interface CartService {
      * @return
      */
     Page<Cart> findByName(int pageNum, int pageSize,String name);
-    int countByName(String name);
 
     /**
      * 根据用户名模糊查询
@@ -53,5 +51,4 @@ public interface CartService {
      * @return
      */
     Page<Cart> findLikeName(int pageNum, int pageSize,String name);
-    int countLikeName(String name);
 }
