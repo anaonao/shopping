@@ -21,7 +21,10 @@ public class DBUtil {
         Properties properties = new Properties();
         //文件路径用classpath路径---加载classpath中的文件，因为properties文件被加载后在class文件中
         InputStream inputStream = DBUtil.class.getClassLoader().getResourceAsStream("db.properties");
+
+
         try {
+
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();

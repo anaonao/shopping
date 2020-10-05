@@ -8,6 +8,7 @@ public class AdminTest {
     AdminDao adminDao = new AdminDaoImpl();
     @Test
     public void selectAll(){
+
         adminDao.selectAll(2,1).getData().forEach(System.out::println);
     }
 }
